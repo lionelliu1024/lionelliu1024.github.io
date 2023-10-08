@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>🏖 生活 on juanliu&#39;s Blog</title>
-    <link>https://blog.juanliu.top/posts/life/</link>
-    <description>Recent content in 🏖 生活 on juanliu&#39;s Blog</description>
+    <title>自限性疾病 on juanliu&#39;s Blog</title>
+    <link>https://blog.juanliu.top/categories/%E8%87%AA%E9%99%90%E6%80%A7%E7%96%BE%E7%97%85/</link>
+    <description>Recent content in 自限性疾病 on juanliu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Jul 2022 00:18:15 +0800</lastBuildDate><atom:link href="https://blog.juanliu.top/posts/life/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Jul 2022 00:18:15 +0800</lastBuildDate><atom:link href="https://blog.juanliu.top/categories/%E8%87%AA%E9%99%90%E6%80%A7%E7%96%BE%E7%97%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>自限性疾病</title>
       <link>https://blog.juanliu.top/posts/life/%E8%87%AA%E9%99%90%E6%80%A7%E7%96%BE%E7%97%85/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://blog.juanliu.top/posts/life/%E8%87%AA%E9%99%90%E6%80%A7%E7%96%BE%E7%97%85/</guid>
       <description>“自限性疾病”是一个非常重要的医学概念。这些年来，无论是医学科普工作者，还是卫生主管机构，一直在科普这个概念。 简单来说，一些疾病有它自己的病程。这个过程不会无限扩大，就算没有特殊的针对病因本身的治疗，在人体免疫系统正常的运作下，通常疾病也会渐渐改善。 01 自限性疾病很常见 实际上，每个</description>
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>https://blog.juanliu.top/posts/life/life/</link>
-      <pubDate>Thu, 05 May 2022 00:18:15 +0800</pubDate>
-      
-      <guid>https://blog.juanliu.top/posts/life/life/</guid>
-      <description></description>
     </item>
     
   </channel>

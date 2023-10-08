@@ -219,22 +219,6 @@ var _hmt = _hmt || [];
 <article class="post-entry">
   <div class="post-info">
     <header class="entry-header">
-      <h2>🧱 建站
-      </h2>
-    </header>
-    <section class="entry-content">
-      <p>
-        
-        
-      </p>
-    </section>
-  </div> 
-  <a class="entry-link" aria-label="post link to 🧱 建站" href="https://blog.juanliu.top/posts/blog/"></a>
-</article>
-
-<article class="post-entry">
-  <div class="post-info">
-    <header class="entry-header">
       <h2>🏖 生活
       </h2>
     </header>
@@ -246,6 +230,22 @@ var _hmt = _hmt || [];
     </section>
   </div> 
   <a class="entry-link" aria-label="post link to 🏖 生活" href="https://blog.juanliu.top/posts/life/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2>🧱 建站
+      </h2>
+    </header>
+    <section class="entry-content">
+      <p>
+        
+        
+      </p>
+    </section>
+  </div> 
+  <a class="entry-link" aria-label="post link to 🧱 建站" href="https://blog.juanliu.top/posts/blog/"></a>
 </article>
 
 <article class="post-entry">
@@ -368,17 +368,17 @@ var _hmt = _hmt || [];
 
 <script>
     document.body.addEventListener('copy', function (e) {
-        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 20) {
             let clipboardData = e.clipboardData || window.clipboardData;
             if (clipboardData) {
                 e.preventDefault();
                 let htmlData = window.getSelection().toString() +
                     '\r\n\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 let textData = window.getSelection().toString() +
                     '\r\n\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 clipboardData.setData('text/html', htmlData);
                 clipboardData.setData('text/plain', textData);

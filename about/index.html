@@ -281,7 +281,20 @@ var _hmt = _hmt || [];
 <!-- https://mail.kb4.io/XUlhGelFuUk1jR1YyVm1sTWVXMXJaV3R6YlV0M0wwRTFNek5rTjNGNVUwSnRWbXBsWlVrNVNVWmhWWFJSVm1jelJXRmFkM0V5YTNrMWR6ZE9iVlJrVWxWaVNHTnBMMVZTVkhOVlp6STFZMHR2VlhKSVNFNVFOVk5OZWxZeGFrWnVhMWwwY0d0QkwweFljeXRDVFRKWWRsRXJSV1Y0WVVoVFRUazRZazVPWVdoNFRreHRSSEozT0VsSk0wTldWMFkxTW5Jdk4xVkdXRTkzTDFSbFptcFRMMjl3UTJnd2RIUXpibEpWUFMwdFJtNTNjVTl4YXpORldVeENhVlpRUzBOWlFsaFZVVDA5LS0xYjg2Njk0NDcxZGU4ZWI3NmVmYjNkZThmYjIxOTA2ODUyMDc4ZGE0?cid=1660174500 -->
 
 
-        </div>
+                
+
+
+
+
+<hr>
+<div class="open-message" style="background-color: #c9f2f1b8;">
+    <span style="font-size:14px"><b>本文为原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。</b><b>本文链接：</b><a href="https://blog.juanliu.top/about/" target="_blank" title="">https://blog.juanliu.top/about/</a></span><br><span style="font-size:12px;color: #bf3838;"><b>如若商业转载，请联系站长【https://blog.juanliu.top】申请授权！！！</b></span>  
+</div>
+<script>
+</script>
+<style>
+</style>
+</div>
 
         <footer class="post-footer">
             
@@ -322,6 +335,7 @@ var _hmt = _hmt || [];
         })
     </script>
 </div>
+
 </article>
 </main>
 
@@ -423,17 +437,17 @@ var _hmt = _hmt || [];
 
 <script>
     document.body.addEventListener('copy', function (e) {
-        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 20) {
             let clipboardData = e.clipboardData || window.clipboardData;
             if (clipboardData) {
                 e.preventDefault();
                 let htmlData = window.getSelection().toString() +
                     '\r\n\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 let textData = window.getSelection().toString() +
                     '\r\n\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 clipboardData.setData('text/html', htmlData);
                 clipboardData.setData('text/plain', textData);
@@ -459,7 +473,7 @@ var _hmt = _hmt || [];
             if ('clipboard' in navigator) {
                 let text = codeblock.textContent +
                     '\r\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 navigator.clipboard.writeText(text);
                 copyingDone();
@@ -502,8 +516,10 @@ var _hmt = _hmt || [];
             
         } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
             
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-            container.appendChild(macTool)
+            let table = codeblock.parentNode.parentNode.parentNode.parentNode.parentNode;
+            table.appendChild(copybutton);
+            table.appendChild(macTool);
+            
         } else {
             
             codeblock.parentNode.appendChild(copybutton);

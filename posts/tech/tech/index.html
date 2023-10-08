@@ -56,7 +56,7 @@
 
     </style>
 </noscript>
-<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
 
 
 
@@ -412,7 +412,52 @@ var _hmt = _hmt || [];
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
 </span></span></code></pre></div>
 
-        </div>
+                
+  
+
+<script>  
+    
+    $(".language-fallback").each(
+        (index, el) => {
+            
+            let reg = "^(\\s*mermaid\n)";
+            if(null == el.innerText.match(reg)){
+                
+                return;
+            }
+            var text = el.innerText.replaceAll("<", "&lt")
+            text = text.replaceAll(">", "&gt")
+            text = text.replace(/^(\s*mermaid\n)(.*)/g, "$2")
+            var newH = `<div class="mermaid">${text}</div>`;
+            var parentH = $(el).parents('div .highlight')[0]; 
+            parentH.outerHTML = newH;
+        }  
+    )  
+</script>
+<script type="module">  
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+    mermaid.initialize({ startOnLoad: true });  
+</script>    
+<style>  
+       
+    .mermaid svg {  
+        display: block;  
+        margin: auto;  
+    }  
+</style>  
+
+
+
+
+<hr>
+<div class="open-message" style="background-color: #c9f2f1b8;">
+    <span style="font-size:14px"><b>本文为原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。</b><b>本文链接：</b><a href="https://blog.juanliu.top/posts/tech/tech/" target="_blank" title="">https://blog.juanliu.top/posts/tech/tech/</a></span><br><span style="font-size:12px;color: #bf3838;"><b>如若商业转载，请联系站长【https://blog.juanliu.top】申请授权！！！</b></span>  
+</div>
+<script>
+</script>
+<style>
+</style>
+</div>
         <div class="post-reward">
             <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
                 <div id="QR" style="opacity: 0;">
@@ -487,6 +532,7 @@ var _hmt = _hmt || [];
         })
     </script>
 </div>
+
 </article>
 </main>
 
@@ -588,17 +634,17 @@ var _hmt = _hmt || [];
 
 <script>
     document.body.addEventListener('copy', function (e) {
-        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 20) {
             let clipboardData = e.clipboardData || window.clipboardData;
             if (clipboardData) {
                 e.preventDefault();
                 let htmlData = window.getSelection().toString() +
                     '\r\n\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 let textData = window.getSelection().toString() +
                     '\r\n\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 clipboardData.setData('text/html', htmlData);
                 clipboardData.setData('text/plain', textData);
@@ -624,7 +670,7 @@ var _hmt = _hmt || [];
             if ('clipboard' in navigator) {
                 let text = codeblock.textContent +
                     '\r\n————————————————\r\n' +
-                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                    '版权声明：本文为「'+"juanliu's Blog"+'」的原创文章，遵循CC 4.0 BY-NC-SA版权协议，转载请附上原文出处链接及本声明。如若商业转载，请联系站长【https://blog.juanliu.top】授权！' +
                 '\r\n原文链接：' + location.href;
                 navigator.clipboard.writeText(text);
                 copyingDone();
@@ -667,8 +713,10 @@ var _hmt = _hmt || [];
             
         } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
             
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-            container.appendChild(macTool)
+            let table = codeblock.parentNode.parentNode.parentNode.parentNode.parentNode;
+            table.appendChild(copybutton);
+            table.appendChild(macTool);
+            
         } else {
             
             codeblock.parentNode.appendChild(copybutton);
