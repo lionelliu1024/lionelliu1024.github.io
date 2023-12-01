@@ -6,7 +6,16 @@
     <description>Recent content in 👨🏻‍💻 技术 on juanliu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 21 Feb 2023 12:20:21 +0800</lastBuildDate><atom:link href="https://blog.juanliu.top/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Oct 2023 14:16:57 +0800</lastBuildDate><atom:link href="https://blog.juanliu.top/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Echarts画图</title>
+      <link>https://blog.juanliu.top/posts/tech/echarts%E7%94%BB%E5%9B%BE/</link>
+      <pubDate>Mon, 16 Oct 2023 14:16:57 +0800</pubDate>
+      
+      <guid>https://blog.juanliu.top/posts/tech/echarts%E7%94%BB%E5%9B%BE/</guid>
+      <description>环状饼图 option = { tooltip: { trigger: &amp;#39;item&amp;#39; }, legend: { show:false, top: &amp;#39;5%&amp;#39;, left: &amp;#39;center&amp;#39; }, series: [ { name: &amp;#39;Access From&amp;#39;, type: &amp;#39;pie&amp;#39;, radius: [&amp;#39;52%&amp;#39;, &amp;#39;75%&amp;#39;], avoidLabelOverlap: false, itemStyle: { borderRadius: 10, borderColor: &amp;#39;#fff&amp;#39;, borderWidth: 2 }, label: { show: false, fontSize: 20, rotate: &amp;#39;tangential&amp;#39;, position: &amp;#39;inside&amp;#39; }, labelLine: { show: false }, data: [ { value: 100, name: &amp;#39;Search Engine&amp;#39; }, { value: 100, name: &amp;#39;Direct&amp;#39; }, { value: 100, name: &amp;#39;Video Ads&amp;#39; } ] }, { name: &amp;#39;Access From&amp;#39;, type: &amp;#39;pie&amp;#39;, radius: &amp;#39;45%&amp;#39;, data: [ { value: 1048, name: &amp;#39;Search Engine&amp;#39; }, ], itemStyle:{ color: &amp;#34;rgba(141, 225, 238, 1)&amp;#34;, }, label: { show: false, fontSize: 20, rotate: 0, position: &amp;#39;center&amp;#39; }, } ] };</description>
+    </item>
+    
     <item>
       <title>Tech1</title>
       <link>https://blog.juanliu.top/posts/tech/tech1/</link>

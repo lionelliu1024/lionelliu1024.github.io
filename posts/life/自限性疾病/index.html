@@ -99,7 +99,7 @@ var _hmt = _hmt || [];
         {
           "@type": "ListItem",
           "position":  1 ,
-          "name": "📚文章",
+          "name": "🛠️ 工具",
           "item": "https://blog.juanliu.top/posts/"
         },
 
@@ -255,10 +255,11 @@ var _hmt = _hmt || [];
     }
 </style>
 
+
 <article class="post-single">
     <div id="single-content">
         <header class="post-header">
-            <div class="breadcrumbs"><a href="https://blog.juanliu.top/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://blog.juanliu.top/posts/">📚文章</a>&nbsp;»&nbsp;<a href="https://blog.juanliu.top/posts/life/">🏖 生活</a></div>
+            <div class="breadcrumbs"><a href="https://blog.juanliu.top/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://blog.juanliu.top/posts/">🛠️ 工具</a>&nbsp;»&nbsp;<a href="https://blog.juanliu.top/posts/life/">🏖 生活</a></div>
             <h1 class="post-title">
                 自限性疾病
             </h1>
@@ -331,36 +332,6 @@ var _hmt = _hmt || [];
                     <span id="post_meta_style_8">
                         <span class="fa fa-commenting-o"></span>
                         <span>
-                            <script src="https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js"></script>
-                            <script>
-                                let url = document.documentURI
-                                
-                                let dnsUrl = "https://blog.juanliu.top/"
-                                let urlSplit = url.split(dnsUrl)
-                                let finalUrl = urlSplit[1]
-                                if (finalUrl[0] !== '/') {
-                                    finalUrl = '/'+finalUrl
-                                }
-                                twikoo.getCommentsCount({
-                                    envId: "http://39.107.116.93:8078/", 
-                                region:  null , 
-                                urls: [ 
-                                    
-                                    finalUrl,
-                                ],
-                                    includeReply: false 
-                                }).then(function (res) {
-                                    let count = res[0].count
-                                    const obj = document.getElementById("comment_count");
-                                    obj.innerText = count
-                                    
-                                    
-                                    
-                                }).catch(function (err) {
-                                    
-                                    console.error(err);
-                                });
-                            </script>
                             <span id="comment_count"></span>
                         </span>
                     </span>
@@ -847,40 +818,6 @@ gallery:
 
         </footer>
     </div>
-
-<style>
-    .comments_details summary::marker {
-        font-size: 20px;
-        content: '👉展开评论';
-        color: var(--content);
-    }
-    .comments_details[open] summary::marker{
-        font-size: 20px;
-        content: '👇关闭评论';
-        color: var(--content);
-    }
-</style>
-
-
-<div>
-    <details class="comments_details">
-        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
-            <span style="font-size: 20px;color: var(--content);">...</span>
-        </summary>
-        <div id="tcomment"></div>
-    </details>
-    <script src="https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js">
-    </script>
-    <script>
-        twikoo.init({
-            envId: "http://39.107.116.93:8078/",
-        el: "#tcomment",
-            lang: 'zh-CN',
-            region:  null ,
-        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
-        })
-    </script>
-</div>
 
 </article>
 </main>
