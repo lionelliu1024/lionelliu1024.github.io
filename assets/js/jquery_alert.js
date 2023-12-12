@@ -86,8 +86,11 @@ var jqueryAlert = function(opts) {
         if (option.width == 'auto') {
             $container.css('width', $container[0].clientWidth + 10);
         }
+        if (parseInt($(window).width()) <= parseInt($container.css('width'))) {
+            $container.css('width', $(window).width() - 40);
+        }
         if (parseInt($(window).height()) <= parseInt($container.css('height'))) {
-            $container.css('height', $(window).height());
+            $container.css('height', $(window).height() - 20);
         }
         (!!option.className) && $container.addClass(option.className);
         for (var key in option.buttons) {
