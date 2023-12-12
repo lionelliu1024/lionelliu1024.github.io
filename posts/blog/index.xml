@@ -6,7 +6,16 @@
     <description>Recent content in 🧱 建站 on juanliu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 May 2022 00:18:23 +0800</lastBuildDate><atom:link href="https://blog.juanliu.top/posts/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Dec 2023 15:23:21 +0800</lastBuildDate><atom:link href="https://blog.juanliu.top/posts/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo debug输出变量内容</title>
+      <link>https://blog.juanliu.top/posts/blog/hugodebug/</link>
+      <pubDate>Tue, 05 Dec 2023 15:23:21 +0800</pubDate>
+      
+      <guid>https://blog.juanliu.top/posts/blog/hugodebug/</guid>
+      <description>背景 在修改hugo页面布局时，经常需要引入额外的js或css文件，刷新页面总是不满意，又不方便查看其中的环节及变量，遂想办法如何输出变量内容 官方指令 debug.Dump Returns an object dump as a string. Syntax debug.Dump VALUE Returns string {{ $data := &amp;#34;&amp;#34; }} {{ $p := &amp;#34;data/books.json&amp;#34; }} {{ with resources.Get $p }} {{ $opts := dict &amp;#34;delimiter&amp;#34; &amp;#34;,&amp;#34; }} {{ $data = . | transform.Unmarshal $opts }} {{ else }} {{ errorf &amp;#34;Unable to get resource %q&amp;#34; $p }} {{ end }} &amp;lt;pre&amp;gt;{{ debug.Dump $data }}&amp;lt;/pre&amp;gt; []interface {}{ map[string]interface {}{</description>
+    </item>
+    
     <item>
       <title>Blog</title>
       <link>https://blog.juanliu.top/posts/blog/blog/</link>

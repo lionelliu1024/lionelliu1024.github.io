@@ -347,7 +347,7 @@ var _hmt = _hmt || [];
 <figure class="entry-cover1"><img style="zoom:;" loading="lazy" src="https://www.juanliu.top/posts/blog/how_to_write_a_blog/1.png" alt="">
     
 </figure>
-        <div class="post-content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>&gt;
+        <div class="post-content" id="real_content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span>&gt;
 </span></span><span style="display:flex;"><span>    科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码科技代码
 </span></span><span style="display:flex;"><span>    科技代码
 </span></span><span style="display:flex;"><span>    科技代码
@@ -406,7 +406,7 @@ var _hmt = _hmt || [];
     )  
 </script>
 <script type="module">  
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
+    import mermaid from 'https://fastly.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs'; 
     mermaid.initialize({ startOnLoad: true });  
 </script>    
 <style>  
@@ -469,7 +469,140 @@ var _hmt = _hmt || [];
 
         </footer>
     </div>
+ 
+ 
 
+ <script src="https://juanliu.top/static/cache/jquery.cookie.js"></script>
+ <script defer crossorigin="anonymous" src="/assets/js/jquery_alert.js"></script>
+  
+ <script>
+    console.log("gzhaaaaaaa")
+ </script>
+
+
+<style>
+    #locker {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        display: none;
+        z-index: 10;
+    }
+
+    #locker .mask {
+        height: 20%;
+        width: 100%;
+        background: -webkit-gradient(linear, 0 top, 0 bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+    }
+
+    #locker .info {
+        background: white;
+        height: 60%;
+        padding-bottom: 50px;
+        margin: 0px;
+    }
+
+    .lock {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 30px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .btn-outline {
+        color: #E9405A !important;
+        background-color: transparent;
+        border-color: #E9405A;
+        padding: 5px 16px;
+        border-radius: 5px;
+    }
+</style>
+<div id="locker" style="display: none;">
+    <div class="mask"></div>
+    <div class="info">
+        <div>
+            <p class="text-center" style="color: black;">
+                <a id="read_more" href="javascript:void(0);" class="btn-outline">阅读全文</a>
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+    function m(k){
+        var M=new Date().getMonth()+1
+        return k+(M<10?"0"+M:M)
+    }
+    jLkey="JL_distinctid";alertKey="alertKey";var isDebug = false;ah=m("jl")
+    gzh_alert_conf={
+        'title': '访问防刷，人机识别', 'width': '500', 'height': '600', 'modal': true, 'bodyScroll': 'true', 'content': '扫描下方二维码回复 <strong>解锁码</strong> 获取解锁验证码'
+            + '\n<img width="400" src="https://juanliu.top/static/images/qrcode_juanliu_gzh_344.jpg" />'
+            + '\n<p style="font-size:15px;margin-bottom:15px;"><strong>步骤</strong>:[ 打开微信 ]-&gt;[ 扫描上方二维码 ]-&gt;[ 关注 <span style="color: #E9405A; ">juanliu</span> 的公众号] 输入\n' + '                    <strong style="color: #E9405A; ">解锁码</strong> 获取验证码,即可<span>解锁</span>本站全部文章。\n' + '                </p>'
+            + '\n验证码：<input type="text" id="unlockCode" placeholder="请输入解锁验证码" style="border: black solid 1px;">（请输入验证码）', 'buttons': {}
+    }
+    function getToken() {
+        var token = $.cookie(jLkey); return token;
+    }
+    function getCount() {
+        var count = $.cookie(alertKey); if (!count) { $.cookie(alertKey, 0, { expires: 1, path: '/' }); count = 0; } else { count = parseInt(count); }
+        $.cookie(alertKey, count, { expires: 1, path: '/' }); return count;
+    }
+    function handleAlert02() {
+        var count = getCount(); var alertMax = 1024; if (count < alertMax) {
+            var hour = new Date().getHours(); 
+            function explode() {
+                var tijiao = function () { var code = $('#unlockCode').val(); if (code.indexOf(ah) >= 0) { alert('恭喜，解锁成功！\n希望同志在人生的道路上：\n* 涓流积至沧溟水，拳石崇成泰华岑。'); $.cookie(jLkey, code, { expires: 30, path: '/' }); removeLocker();resetScroll($('html'));lockWin.close(); 
+                } else { alert('解锁验证码有误，请重新输入'); } }
+                gzh_alert_conf.buttons = { '提交': tijiao }
+                closeScroll($('html'));
+                var lockWin = jqueryAlert(gzh_alert_conf); 
+                $.cookie(alertKey, count + 1, { expires: 1, path: '/' });
+            }
+            if (isDebug) { debugger; setTimeout(explode, 1000); } else { setTimeout(explode, (count + 1) * 15000); }
+        }
+    }
+    function closeScroll(el){
+        if(el){
+            el.css("overflow", "hidden");
+        }
+    }
+    function resetScroll(el){
+        if(el){
+            el.css("overflow", "auto");
+        }
+    }
+    function isAttent() {
+        var attent = false; if (location.hostname.indexOf('attent') >= 0) { attent = true; return true; }
+        
+        if (!attent && location.search.indexOf('attent') >= 0) { attent = true; }
+        if (attent) { $.cookie(jLkey, m("jl")+"5101", { expires: 30, path: '/' }); }
+        if ( getToken() && getToken().indexOf(ah) >= 0) { return true; }
+        return false;
+    }
+    function removeLocker() { document.getElementById("locker").style.display="none";document.getElementById("real_content").removeAttribute('style') }
+    function addLocker() {
+        
+        if (document.getElementById("real_content")) { 
+            document.getElementById("real_content").style.height = "600px"; 
+            document.getElementById("real_content").style.overflow = "hidden"; 
+            
+            document.getElementById("locker").style.display="block";
+        }
+    }
+    function isMobile() { if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { return true; } else if (/(Android)/i.test(navigator.userAgent)) { return true; } else { return false; } }
+    $(document).ready(function () {
+        isDebug = true;
+        
+        if(isAttent()){removeLocker()} else {addLocker();}
+        $('#read_more').click(function() {
+            handleAlert02()
+        })
+    })
+</script>
 </article>
 </main>
 
