@@ -411,15 +411,15 @@ var _hmt = _hmt || [];
     }
 
     #locker .mask {
-        height: 20%;
+        height: 30%;
         width: 100%;
         background: -webkit-gradient(linear, 0 top, 0 bottom, from(rgba(255, 255, 255, 0)), to(#fff));
     }
 
     #locker .info {
         background: white;
-        height: 60%;
-        padding-bottom: 50px;
+        height: 70%;
+        padding-bottom: 20px;
         margin: 0px;
     }
 
@@ -506,11 +506,10 @@ var _hmt = _hmt || [];
     function removeLocker() { document.getElementById("locker").style.display="none";document.getElementById("real_content").removeAttribute('style') }
     function addLocker() {
         
-        if (document.getElementById("real_content")) { 
-            document.getElementById("real_content").style.height = "600px"; 
-            document.getElementById("real_content").style.overflow = "hidden"; 
-            
-            document.getElementById("locker").style.display="block";
+        var real_content_div = $("#real_content")
+        if (real_content_div) { 
+            real_content_div.css("height", "600px").css("overflow", "hidden");
+            $("#locker").css("display", "block").css("height", real_content_div.outerHeight(true)).css("top", real_content_div.position().top)
         }
     }
     function isMobile() { if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { return true; } else if (/(Android)/i.test(navigator.userAgent)) { return true; } else { return false; } }
